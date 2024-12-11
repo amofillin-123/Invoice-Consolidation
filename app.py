@@ -7,6 +7,8 @@ import tempfile
 import logging
 import shutil
 import uuid
+import threading
+import time
 
 # 设置日志
 logging.basicConfig(
@@ -124,8 +126,8 @@ def upload_files():
             'message': '处理完成！'
         })
 
-        # 清理临时文件
-        shutil.rmtree(temp_dir)
+        # 不清理临时文件
+        # shutil.rmtree(temp_dir)
         
         return jsonify({
             'message': '发票合并成功',
@@ -165,12 +167,30 @@ def request_entity_too_large(error):
 
 def cleanup_temp_files():
     """清理临时文件"""
-    if os.path.exists(app.config['UPLOAD_FOLDER']):
-        shutil.rmtree(app.config['UPLOAD_FOLDER'])
+    try:
+        # 只清理超过1小时的文件
+        current_time = time.time()
+        if os.path.exists(app.config['UPLOAD_FOLDER']):
+            for filename in os.listdir(app.config['UPLOAD_FOLDER']):
+                filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                if os.path.isfile(filepath):
+                    # 获取文件的最后修改时间
+                    file_time = os.path.getmtime(filepath)
+                    # 如果文件超过1小时，则删除
+                    if current_time - file_time > 3600:
+                        os.remove(filepath)
+    except Exception as e:
+        logging.error(f"清理临时文件时出错: {str(e)}", exc_info=True)
 
-# 确保程序退出时清理临时文件
-import atexit
-atexit.register(cleanup_temp_files)
+# 添加定时清理任务
+def schedule_cleanup():
+    while True:
+        time.sleep(3600)  # 每小时执行一次
+        cleanup_temp_files()
+
+# 在新线程中启动清理任务
+cleanup_thread = threading.Thread(target=schedule_cleanup, daemon=True)
+cleanup_thread.start()
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
