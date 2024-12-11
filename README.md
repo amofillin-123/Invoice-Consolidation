@@ -72,8 +72,8 @@
 
 ## 开发相关
 
-- 代码仓库：https://github.com/[您的GitHub用户名]/invoice-merger
-- 问题反馈：https://github.com/[您的GitHub用户名]/invoice-merger/issues
+- 代码仓库：https://github.com/amofillin-123/Invoice-Consolidation
+- 问题反馈：https://github.com/amofillin-123/Invoice-Consolidation/issues
 - 开发文档：[docs/](./docs/)
 
 ## 贡献指南
