@@ -104,6 +104,9 @@ class InvoiceMerger:
             logging.info(f"共处理了 {len(processed_images)} 个文件")
             
             # 创建新的PDF文件，使用更高的质量设置
+            output_dir = os.path.dirname(output_file)
+            os.makedirs(output_dir, exist_ok=True)
+            
             c = canvas.Canvas(output_file, pagesize=A4)
             c.setPageCompression(0)  # 禁用压缩以保持质量
             page_width, page_height = A4
@@ -137,22 +140,13 @@ class InvoiceMerger:
             c.save()
             logging.info(f"PDF文件已保存到: {output_file}")
             
+            # 确保文件存在并且可读
+            if not os.path.exists(output_file):
+                raise Exception(f"PDF文件未能成功保存到: {output_file}")
+            
         except Exception as e:
             logging.error(f"合并文件时出错: {str(e)}", exc_info=True)
             raise
-        finally:
-            # 清理临时文件
-            if os.path.exists(self.temp_dir):
-                shutil.rmtree(self.temp_dir)
-
-    def cleanup(self):
-        """清理临时文件和目录"""
-        try:
-            for file in os.listdir(self.temp_dir):
-                os.remove(os.path.join(self.temp_dir, file))
-            os.rmdir(self.temp_dir)
-        except Exception as e:
-            logging.error(f"清理临时文件时出错: {str(e)}")
 
 def main():
     parser = argparse.ArgumentParser(description='合并发票文件为PDF')

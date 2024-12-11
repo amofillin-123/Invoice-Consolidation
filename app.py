@@ -77,6 +77,7 @@ def upload_files():
     }
 
     # 保存文件并处理
+    temp_dir = None
     try:
         temp_dir = tempfile.mkdtemp()
         saved_files = []
@@ -117,7 +118,14 @@ def upload_files():
                 'message': f'正在处理 {filename}...'
             })
 
+        # 确保输出目录存在
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        
         merger.merge_files(saved_files, output_path, progress_callback)
+
+        # 确保文件已成功生成
+        if not os.path.exists(output_path):
+            raise Exception("生成的PDF文件未找到")
 
         # 更新完成状态
         processing_status[task_id].update({
@@ -125,9 +133,6 @@ def upload_files():
             'progress': 100,
             'message': '处理完成！'
         })
-
-        # 不清理临时文件
-        # shutil.rmtree(temp_dir)
         
         return jsonify({
             'message': '发票合并成功',
@@ -137,8 +142,6 @@ def upload_files():
 
     except Exception as e:
         logging.error(f"处理文件时出错: {str(e)}", exc_info=True)
-        if os.path.exists(temp_dir):
-            shutil.rmtree(temp_dir)
         
         # 更新错误状态
         if task_id in processing_status:
@@ -148,12 +151,21 @@ def upload_files():
             })
         
         return jsonify({'error': f'处理文件时出错: {str(e)}'}), 500
+    finally:
+        # 清理临时目录
+        if temp_dir and os.path.exists(temp_dir):
+            shutil.rmtree(temp_dir)
 
 @app.route('/download/<filename>')
 def download_file(filename):
     try:
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        if not os.path.exists(file_path):
+            logging.error(f"文件不存在: {file_path}")
+            return jsonify({'error': '文件不存在'}), 404
+            
         return send_file(
-            os.path.join(app.config['UPLOAD_FOLDER'], filename),
+            file_path,
             as_attachment=True,
             download_name='合并后的发票.pdf'
         )
