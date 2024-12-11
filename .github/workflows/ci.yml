@@ -22,16 +22,16 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y poppler-utils
+        sudo apt-get install -y poppler-utils ghostscript python3-tk
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest pillow pdf2image reportlab
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         
     - name: Lint with flake8
       run: |
