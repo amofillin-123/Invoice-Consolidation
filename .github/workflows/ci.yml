@@ -44,10 +44,30 @@ jobs:
       env:
         UPLOAD_FOLDER: /tmp/invoice_uploads
         PYTHONPATH: ${{ github.workspace }}
+        PYTHONUNBUFFERED: 1
       run: |
+        # 检查系统环境
+        echo "Python version:"
+        python --version
+        echo "Pip version:"
+        pip --version
+        echo "Installed packages:"
+        pip list
+        echo "Current directory:"
+        pwd
+        echo "Directory contents:"
+        ls -la
+        echo "Testing directory:"
+        ls -la tests/
+        
+        # 准备测试环境
         mkdir -p /tmp/invoice_uploads
         chmod 777 /tmp/invoice_uploads
-        python -m pytest -v --tb=long --capture=no
+        echo "Upload directory:"
+        ls -la /tmp/invoice_uploads
+        
+        # 运行测试
+        python -m pytest -v --tb=long --capture=no --log-cli-level=DEBUG
 
   deploy:
     needs: test

@@ -19,7 +19,9 @@ logging.basicConfig(
 
 class InvoiceMerger:
     def __init__(self):
-        self.temp_dir = tempfile.mkdtemp()  # 创建临时目录
+        self.temp_dir = os.getenv('UPLOAD_FOLDER', tempfile.mkdtemp())
+        os.makedirs(self.temp_dir, exist_ok=True)
+        os.chmod(self.temp_dir, 0o777)  # 确保目录有正确的权限
         
     def convert_pdf_to_image(self, pdf_path):
         """将PDF转换为图片"""
