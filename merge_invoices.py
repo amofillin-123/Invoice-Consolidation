@@ -92,6 +92,109 @@ class InvoiceMerger:
         logging.info(f"原始大小: {image.size}, 调整后大小: ({width}, {height})")
         return width, height
 
+    def merge_invoices(self, files):
+        """合并发票文件"""
+        processed_files = []
+        
+        # 创建一个临时目录来存储上传的文件
+        temp_dir = tempfile.mkdtemp()
+        
+        try:
+            # 保存上传的文件
+            for file in files:
+                if file.filename:
+                    filepath = os.path.join(temp_dir, secure_filename(file.filename))
+                    file.save(filepath)
+                    processed_files.append(filepath)
+            
+            # 处理所有文件
+            image_files = []
+            for filepath in processed_files:
+                try:
+                    if filepath.lower().endswith('.pdf'):
+                        logging.info(f"处理文件: {filepath}")
+                        # 将 PDF 转换为图片
+                        img_path = self.convert_pdf_to_image(filepath)
+                        if img_path:
+                            image_files.append(img_path)
+                    elif any(filepath.lower().endswith(ext) for ext in ['.png', '.jpg', '.jpeg']):
+                        logging.info(f"开始处理图片: {filepath}")
+                        img = Image.open(filepath)
+                        logging.info(f"图片大小: {img.size}, 模式: {img.mode}")
+                        image_files.append(filepath)
+                except Exception as e:
+                    logging.error(f"处理文件 {filepath} 时出错: {str(e)}")
+                    continue
+            
+            logging.info(f"共处理了 {len(processed_files)} 个文件")
+            
+            if not image_files:
+                raise ValueError("没有可处理的文件")
+            
+            # 创建输出目录
+            os.makedirs(self.temp_dir, exist_ok=True)
+            output_path = os.path.join(self.temp_dir, 'merged_invoices.pdf')
+            
+            # 创建新的 PDF 文档
+            c = canvas.Canvas(output_path, pagesize=A4)
+            c.setPageCompression(1)  # 启用压缩以减小文件大小
+            
+            # 设置默认字体为中文字体
+            if 'wqy-zenhei' in pdfmetrics.getRegisteredFontNames():
+                c.setFont('wqy-zenhei', 10)
+            
+            page_width, page_height = A4
+            logging.info(f"PDF页面大小: {A4}")
+            
+            # 计算每页可以放置的图片数量和大小
+            margin = 20  # 页面边距
+            image_width = page_width - 2 * margin
+            max_image_height = (page_height - 3 * margin) / 2  # 每页放2张图片
+            
+            # 处理每个图片
+            for i, img_path in enumerate(image_files):
+                if i > 0 and i % 2 == 0:
+                    c.showPage()  # 创建新页面
+                    if 'wqy-zenhei' in pdfmetrics.getRegisteredFontNames():
+                        c.setFont('wqy-zenhei', 10)
+                
+                img = Image.open(img_path)
+                width, height = img.size
+                
+                # 计算缩放比例
+                scale = min(image_width / width, max_image_height / height)
+                new_width = width * scale
+                new_height = height * scale
+                
+                logging.info(f"原始大小: {(width, height)}, 调整后大小: {(new_width, new_height)}")
+                
+                # 计算图片在页面上的位置
+                x = margin
+                y = page_height - margin - new_height if i % 2 == 0 else page_height - 2 * margin - 2 * new_height
+                
+                # 将图片绘制到 PDF
+                c.drawImage(img_path, x, y, width=new_width, height=new_height, preserveAspectRatio=True)
+                
+                # 在图片下方添加文件名
+                filename = os.path.basename(img_path)
+                c.drawString(x, y - 15, filename[:50])  # 限制文件名长度
+            
+            # 保存最后一页
+            c.save()
+            
+            logging.info(f"PDF文件已保存到: {output_path}")
+            return output_path
+            
+        except Exception as e:
+            logging.error(f"合并文件时出错: {str(e)}")
+            raise
+        finally:
+            # 清理临时文件
+            try:
+                shutil.rmtree(temp_dir)
+            except Exception as e:
+                logging.error(f"清理临时文件时出错: {str(e)}")
+
     def merge_files(self, input_files, output_file, progress_callback=None):
         try:
             # 创建一个列表存储所有处理后的图片

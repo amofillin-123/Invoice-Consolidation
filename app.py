@@ -156,6 +156,48 @@ def upload_files():
         if temp_dir and os.path.exists(temp_dir):
             shutil.rmtree(temp_dir)
 
+@app.route('/merge', methods=['POST'])
+def merge():
+    if 'files[]' not in request.files:
+        return jsonify({'error': '没有选择文件'}), 400
+    
+    files = request.files.getlist('files[]')
+    if not files or all(not file.filename for file in files):
+        return jsonify({'error': '没有选择文件'}), 400
+
+    try:
+        merger = InvoiceMerger()
+        output_path = merger.merge_invoices(files)
+        
+        if not os.path.exists(output_path):
+            return jsonify({'error': '生成PDF文件失败'}), 500
+        
+        # 获取文件大小
+        file_size = os.path.getsize(output_path)
+        if file_size == 0:
+            return jsonify({'error': '生成的PDF文件为空'}), 500
+        
+        logging.info(f"准备下载文件: {output_path}, 大小: {file_size} 字节")
+        
+        # 使用 send_file 发送文件，设置合适的 MIME 类型和缓存控制
+        response = send_file(
+            output_path,
+            mimetype='application/pdf',
+            as_attachment=True,
+            download_name='merged_invoices.pdf'
+        )
+        
+        # 添加缓存控制头
+        response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+        response.headers['Pragma'] = 'no-cache'
+        response.headers['Expires'] = '0'
+        
+        return response
+        
+    except Exception as e:
+        logging.error(f"处理文件时出错: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
 @app.route('/download/<filename>')
 def download_file(filename):
     try:

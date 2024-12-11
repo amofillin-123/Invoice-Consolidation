@@ -26,11 +26,11 @@ ENV PYTHONIOENCODING=utf8
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
-# 创建上传目录
-RUN mkdir -p /tmp/uploads
+# 创建上传目录并设置权限
+RUN mkdir -p /tmp/uploads && chmod 777 /tmp/uploads
 
 # 暴露端口
 EXPOSE 8080
 
 # 启动命令
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
+CMD ["gunicorn", "--config", "gunicorn.conf.py", "app:app"]
