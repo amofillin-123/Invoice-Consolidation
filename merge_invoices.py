@@ -10,6 +10,8 @@ import logging
 import argparse
 import shutil
 from reportlab.lib.utils import ImageReader
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 
 # 设置日志记录
 logging.basicConfig(
@@ -23,6 +25,24 @@ class InvoiceMerger:
         os.makedirs(self.temp_dir, exist_ok=True)
         os.chmod(self.temp_dir, 0o777)  # 确保目录有正确的权限
         
+        # 注册中文字体
+        try:
+            font_paths = [
+                '/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc',  # WenQuanYi Zen Hei
+                '/usr/share/fonts/truetype/wqy/wqy-microhei.ttc',  # WenQuanYi Micro Hei
+            ]
+            
+            for font_path in font_paths:
+                if os.path.exists(font_path):
+                    font_name = os.path.splitext(os.path.basename(font_path))[0]
+                    pdfmetrics.registerFont(TTFont(font_name, font_path))
+                    logging.info(f"成功注册字体: {font_name}")
+                    break
+            else:
+                logging.warning("未找到可用的中文字体")
+        except Exception as e:
+            logging.error(f"注册字体时出错: {str(e)}")
+
     def convert_pdf_to_image(self, pdf_path):
         """将PDF转换为图片"""
         try:
@@ -109,30 +129,37 @@ class InvoiceMerger:
             
             c = canvas.Canvas(output_file, pagesize=A4)
             c.setPageCompression(0)  # 禁用压缩以保持质量
+            
+            # 设置默认字体为中文字体
+            if 'wqy-zenhei' in pdfmetrics.getRegisteredFontNames():
+                c.setFont('wqy-zenhei', 10)
+            
             page_width, page_height = A4
             logging.info(f"PDF页面大小: {A4}")
 
-            # 计算每页可以放置的图片数量和大小
-            max_images_per_page = 2
-            max_image_height = (page_height - 40) / max_images_per_page  # 留出页边距
-            max_image_width = page_width - 40  # 留出页边距
+            # 每页只放2张图片，上下排列
+            margin = 20  # 页边距
+            spacing = 20  # 图片间距
+            max_image_height = (page_height - 2 * margin - spacing) / 2  # 每张图片的最大高度
+            max_image_width = page_width - 2 * margin  # 图片的最大宽度
 
-            # 分批处理图片
-            for i in range(0, len(processed_images), max_images_per_page):
-                batch = processed_images[i:i + max_images_per_page]
-                y_position = page_height - 20  # 从顶部开始
+            # 分批处理图片，每页2张
+            for i in range(0, len(processed_images), 2):
+                y_position = page_height - margin
                 
-                for image in batch:
+                # 处理当前页的图片（最多2张）
+                current_images = processed_images[i:i+2]
+                for image in current_images:
                     # 计算图片在页面上的大小
                     width, height = self.calculate_image_size(image, max_image_width, max_image_height)
-                    x_position = (page_width - width) / 2  # 居中放置
+                    x_position = (page_width - width) / 2  # 水平居中
                     
                     # 在PDF中绘制图片
                     c.drawImage(ImageReader(image), x_position, y_position - height, width, height)
-                    y_position -= (height + 20)  # 添加间距
+                    y_position -= (height + spacing)  # 移动到下一个位置
                     
                     if progress_callback:
-                        current_progress = i + batch.index(image) + 1
+                        current_progress = i + current_images.index(image) + 1
                         progress_callback(current_progress, len(processed_images), "正在生成PDF...")
                 
                 c.showPage()  # 创建新页面
