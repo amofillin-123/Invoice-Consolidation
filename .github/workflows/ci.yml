@@ -42,7 +42,7 @@ jobs:
         
     - name: Run tests with verbose output
       run: |
-        python -m pytest -v
+        python -m pytest -v --tb=long --capture=no
 
   deploy:
     needs: test
