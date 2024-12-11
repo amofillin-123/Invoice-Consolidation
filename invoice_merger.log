@@ -1,0 +1,797 @@
+2024-12-09 21:53:23,089 - INFO - GUI initialized successfully
+2024-12-09 21:53:33,184 - INFO - Opening file dialog
+2024-12-09 21:54:23,876 - INFO - GUI initialized successfully
+2024-12-09 21:54:29,289 - INFO - Opening file dialog
+2024-12-09 21:55:33,775 - INFO - GUI initialized successfully
+2024-12-09 21:55:39,328 - INFO - Opening file dialog
+2024-12-09 21:56:56,321 - INFO - GUI initialized successfully
+2024-12-09 21:57:06,079 - INFO - Opening file dialog
+2024-12-09 21:58:38,011 - INFO - GUI initialized successfully
+2024-12-09 21:59:13,067 - INFO - Added 11 files
+2024-12-09 21:59:36,660 - INFO - Processing file 1/11: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf
+2024-12-09 21:59:36,664 - INFO - Processing file 2/11: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_166.00Ôª_2022.07.17_ºÀ¶¦·á£¨ÏÃÃÅ£©²ÍÒûÓÐÏÞ¹«Ë¾Îäºº½¨°²½Ö²ÍÌü_042002200211_85799214.pdf
+2024-12-09 21:59:36,669 - INFO - Processing file 3/11: /Users/amofillinht/Desktop/测试PDF文件/餐饮_111.00元_2022.06.29_杭州市上城区华筵餐饮店_033002200111_58681919.pdf
+2024-12-09 21:59:36,669 - ERROR - Error processing files: Canvas.save() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 126, in process_files
+    current_page.save(temp_path)
+TypeError: Canvas.save() takes 1 positional argument but 2 were given
+2024-12-09 21:59:36,671 - ERROR - Error in merge operation: Canvas.save() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 99, in merge_files
+    self.process_files(output_file)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 126, in process_files
+    current_page.save(temp_path)
+TypeError: Canvas.save() takes 1 positional argument but 2 were given
+2024-12-09 21:59:36,672 - ERROR - Error in event handling: Canvas.save() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 50, in run
+    self.merge_files()
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 99, in merge_files
+    self.process_files(output_file)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 126, in process_files
+    current_page.save(temp_path)
+TypeError: Canvas.save() takes 1 positional argument but 2 were given
+2024-12-09 22:00:13,744 - INFO - GUI initialized successfully
+2024-12-09 22:00:26,339 - INFO - Added 11 files
+2024-12-09 22:00:36,640 - INFO - Processing file 1/11: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf
+2024-12-09 22:00:36,642 - INFO - Processing file 2/11: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_166.00Ôª_2022.07.17_ºÀ¶¦·á£¨ÏÃÃÅ£©²ÍÒûÓÐÏÞ¹«Ë¾Îäºº½¨°²½Ö²ÍÌü_042002200211_85799214.pdf
+2024-12-09 22:00:36,644 - INFO - Processing file 3/11: /Users/amofillinht/Desktop/测试PDF文件/餐饮_111.00元_2022.06.29_杭州市上城区华筵餐饮店_033002200111_58681919.pdf
+2024-12-09 22:00:36,647 - INFO - Processing file 4/11: /Users/amofillinht/Desktop/测试PDF文件/餐饮_119.00元_2022.07.16_武汉秀玉兴宏祥餐饮管理有限公司_042002200211_24551721.pdf
+2024-12-09 22:00:36,648 - INFO - Processing file 5/11: /Users/amofillinht/Desktop/测试PDF文件/其他_78.67元_2023.05.04_北京爱特博旅运服务有限责任公司_011002300511_46921836.pdf
+2024-12-09 22:00:36,649 - INFO - Processing file 6/11: /Users/amofillinht/Desktop/测试PDF文件/其他_102.88元_2023.05.04_武汉斑马快跑科技有限公司_042002300111_27676068.pdf
+2024-12-09 22:00:36,650 - INFO - Processing file 7/11: /Users/amofillinht/Desktop/测试PDF文件/其他_287.49元_2023.05.04_南京领行科技股份有限公司江宁分公司_032002200711_12343661.pdf
+2024-12-09 22:00:36,651 - INFO - Processing file 8/11: /Users/amofillinht/Desktop/测试PDF文件/其他_1000.00元_2023.03.09_武汉东湖新技术开发区亿盛喜村餐厅_042002200511_66048480.pdf
+2024-12-09 22:00:36,652 - INFO - Processing file 9/11: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.16@2x.png
+2024-12-09 22:00:36,664 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:00:36,664 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:00:36,664 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:00:36,664 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:00:36,665 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:00:36,665 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:00:36,665 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:00:36,665 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:00:36,957 - INFO - Processing file 10/11: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.26@2x.png
+2024-12-09 22:00:36,958 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:00:36,958 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:00:36,958 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:00:36,958 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:00:36,959 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:00:36,959 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:00:36,959 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:00:36,959 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:00:37,237 - INFO - Processing file 11/11: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.34@2x.png
+2024-12-09 22:00:37,257 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:00:37,257 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:00:37,257 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:00:37,257 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:00:37,257 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:00:37,257 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:00:37,257 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:00:37,257 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:00:37,541 - ERROR - Error processing files: [Errno 2] No such file or directory: '/var/folders/00/2rr4mk017_x0m3rqgsfswxy80000gn/T/tmp5e3cgsfb.pdf'
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 149, in process_files
+    reader = PdfReader(temp_file)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/PyPDF2/_reader.py", line 317, in __init__
+    with open(stream, "rb") as fh:
+         ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/00/2rr4mk017_x0m3rqgsfswxy80000gn/T/tmp5e3cgsfb.pdf'
+2024-12-09 22:00:37,543 - ERROR - Error in merge operation: [Errno 2] No such file or directory: '/var/folders/00/2rr4mk017_x0m3rqgsfswxy80000gn/T/tmp5e3cgsfb.pdf'
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 99, in merge_files
+    self.process_files(output_file)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 149, in process_files
+    reader = PdfReader(temp_file)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/PyPDF2/_reader.py", line 317, in __init__
+    with open(stream, "rb") as fh:
+         ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/00/2rr4mk017_x0m3rqgsfswxy80000gn/T/tmp5e3cgsfb.pdf'
+2024-12-09 22:00:37,543 - ERROR - Error in event handling: [Errno 2] No such file or directory: '/var/folders/00/2rr4mk017_x0m3rqgsfswxy80000gn/T/tmp5e3cgsfb.pdf'
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 50, in run
+    self.merge_files()
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 99, in merge_files
+    self.process_files(output_file)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 149, in process_files
+    reader = PdfReader(temp_file)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/PyPDF2/_reader.py", line 317, in __init__
+    with open(stream, "rb") as fh:
+         ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/00/2rr4mk017_x0m3rqgsfswxy80000gn/T/tmp5e3cgsfb.pdf'
+2024-12-09 22:01:23,818 - INFO - GUI initialized successfully
+2024-12-09 22:01:38,343 - INFO - Added 11 files
+2024-12-09 22:01:46,753 - INFO - Processing file 1/11: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf
+2024-12-09 22:01:46,756 - INFO - Processing file 2/11: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_166.00Ôª_2022.07.17_ºÀ¶¦·á£¨ÏÃÃÅ£©²ÍÒûÓÐÏÞ¹«Ë¾Îäºº½¨°²½Ö²ÍÌü_042002200211_85799214.pdf
+2024-12-09 22:01:46,757 - INFO - Processing file 3/11: /Users/amofillinht/Desktop/测试PDF文件/餐饮_111.00元_2022.06.29_杭州市上城区华筵餐饮店_033002200111_58681919.pdf
+2024-12-09 22:01:46,759 - INFO - Processing file 4/11: /Users/amofillinht/Desktop/测试PDF文件/餐饮_119.00元_2022.07.16_武汉秀玉兴宏祥餐饮管理有限公司_042002200211_24551721.pdf
+2024-12-09 22:01:46,760 - INFO - Processing file 5/11: /Users/amofillinht/Desktop/测试PDF文件/其他_78.67元_2023.05.04_北京爱特博旅运服务有限责任公司_011002300511_46921836.pdf
+2024-12-09 22:01:46,762 - INFO - Processing file 6/11: /Users/amofillinht/Desktop/测试PDF文件/其他_102.88元_2023.05.04_武汉斑马快跑科技有限公司_042002300111_27676068.pdf
+2024-12-09 22:01:46,762 - INFO - Processing file 7/11: /Users/amofillinht/Desktop/测试PDF文件/其他_287.49元_2023.05.04_南京领行科技股份有限公司江宁分公司_032002200711_12343661.pdf
+2024-12-09 22:01:46,764 - INFO - Processing file 8/11: /Users/amofillinht/Desktop/测试PDF文件/其他_1000.00元_2023.03.09_武汉东湖新技术开发区亿盛喜村餐厅_042002200511_66048480.pdf
+2024-12-09 22:01:46,764 - INFO - Processing file 9/11: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.16@2x.png
+2024-12-09 22:01:46,772 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:01:46,772 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:01:46,772 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:01:46,772 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:01:46,772 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:01:46,772 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:01:46,772 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:01:46,772 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:01:47,055 - INFO - Processing file 10/11: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.26@2x.png
+2024-12-09 22:01:47,055 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:01:47,055 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:01:47,055 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:01:47,055 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:01:47,056 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:01:47,056 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:01:47,056 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:01:47,056 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:01:47,332 - INFO - Processing file 11/11: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.34@2x.png
+2024-12-09 22:01:47,350 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:01:47,351 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:01:47,351 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:01:47,351 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:01:47,351 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:01:47,351 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:01:47,351 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:01:47,351 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:01:47,635 - INFO - PDF generation completed successfully
+2024-12-09 22:04:09,307 - INFO - GUI initialized successfully
+2024-12-09 22:04:19,672 - INFO - Added 11 files
+2024-12-09 22:04:30,523 - INFO - Processing file 1/11: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf
+2024-12-09 22:04:30,532 - ERROR - Error processing PDF /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf: 'PageObject' object has no attribute 'merge_transformed_page'
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 166, in process_pdf
+    output_page.merge_transformed_page(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PageObject' object has no attribute 'merge_transformed_page'. Did you mean: 'mergeTransformedPage'?
+2024-12-09 22:04:30,534 - ERROR - Error processing files: 'PageObject' object has no attribute 'merge_transformed_page'
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 134, in process_files
+    self.process_pdf(file_path, current_page, x_position, 0, invoice_width, invoice_height)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 166, in process_pdf
+    output_page.merge_transformed_page(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PageObject' object has no attribute 'merge_transformed_page'. Did you mean: 'mergeTransformedPage'?
+2024-12-09 22:04:30,536 - ERROR - Error in merge operation: 'PageObject' object has no attribute 'merge_transformed_page'
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 100, in merge_files
+    self.process_files(output_file)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 134, in process_files
+    self.process_pdf(file_path, current_page, x_position, 0, invoice_width, invoice_height)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 166, in process_pdf
+    output_page.merge_transformed_page(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PageObject' object has no attribute 'merge_transformed_page'. Did you mean: 'mergeTransformedPage'?
+2024-12-09 22:04:30,537 - ERROR - Error in event handling: 'PageObject' object has no attribute 'merge_transformed_page'
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 51, in run
+    self.merge_files()
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 100, in merge_files
+    self.process_files(output_file)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 134, in process_files
+    self.process_pdf(file_path, current_page, x_position, 0, invoice_width, invoice_height)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 166, in process_pdf
+    output_page.merge_transformed_page(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PageObject' object has no attribute 'merge_transformed_page'. Did you mean: 'mergeTransformedPage'?
+2024-12-09 22:05:08,911 - INFO - GUI initialized successfully
+2024-12-09 22:05:20,015 - INFO - Added 11 files
+2024-12-09 22:05:28,185 - INFO - Processing file 1/11: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf
+2024-12-09 22:05:28,203 - INFO - Processing file 2/11: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_166.00Ôª_2022.07.17_ºÀ¶¦·á£¨ÏÃÃÅ£©²ÍÒûÓÐÏÞ¹«Ë¾Îäºº½¨°²½Ö²ÍÌü_042002200211_85799214.pdf
+2024-12-09 22:05:28,237 - INFO - Processing file 3/11: /Users/amofillinht/Desktop/测试PDF文件/餐饮_111.00元_2022.06.29_杭州市上城区华筵餐饮店_033002200111_58681919.pdf
+2024-12-09 22:05:28,264 - INFO - Processing file 4/11: /Users/amofillinht/Desktop/测试PDF文件/餐饮_119.00元_2022.07.16_武汉秀玉兴宏祥餐饮管理有限公司_042002200211_24551721.pdf
+2024-12-09 22:05:28,297 - INFO - Processing file 5/11: /Users/amofillinht/Desktop/测试PDF文件/其他_78.67元_2023.05.04_北京爱特博旅运服务有限责任公司_011002300511_46921836.pdf
+2024-12-09 22:05:28,318 - INFO - Processing file 6/11: /Users/amofillinht/Desktop/测试PDF文件/其他_102.88元_2023.05.04_武汉斑马快跑科技有限公司_042002300111_27676068.pdf
+2024-12-09 22:05:28,355 - INFO - Processing file 7/11: /Users/amofillinht/Desktop/测试PDF文件/其他_287.49元_2023.05.04_南京领行科技股份有限公司江宁分公司_032002200711_12343661.pdf
+2024-12-09 22:05:28,376 - INFO - Processing file 8/11: /Users/amofillinht/Desktop/测试PDF文件/其他_1000.00元_2023.03.09_武汉东湖新技术开发区亿盛喜村餐厅_042002200511_66048480.pdf
+2024-12-09 22:05:28,412 - INFO - Processing file 9/11: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.16@2x.png
+2024-12-09 22:05:28,431 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:05:28,431 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:05:28,431 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:05:28,431 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:05:28,432 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:05:28,432 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:05:28,432 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:05:28,432 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:05:28,731 - INFO - Processing file 10/11: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.26@2x.png
+2024-12-09 22:05:28,731 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:05:28,731 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:05:28,731 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:05:28,731 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:05:28,732 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:05:28,732 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:05:28,732 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:05:28,732 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:05:29,010 - INFO - Processing file 11/11: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.34@2x.png
+2024-12-09 22:05:29,011 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:05:29,011 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:05:29,011 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:05:29,011 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:05:29,012 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:05:29,012 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:05:29,012 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:05:29,012 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:05:29,320 - INFO - PDF generation completed successfully
+2024-12-09 22:07:37,379 - INFO - GUI initialized successfully
+2024-12-09 22:07:46,001 - INFO - Added 11 files
+2024-12-09 22:07:55,903 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:07:55,903 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:07:55,903 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:07:55,903 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:07:55,904 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:07:55,904 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:07:55,904 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:07:55,904 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:07:56,200 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:07:56,200 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:07:56,200 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:07:56,200 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:07:56,201 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:07:56,201 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:07:56,201 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:07:56,201 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:07:56,479 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:07:56,479 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:07:56,479 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:07:56,479 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:07:56,479 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:07:56,479 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:07:56,479 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:07:56,479 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:07:56,840 - INFO - PDF generation completed successfully
+2024-12-09 22:13:45,641 - INFO - GUI initialized successfully
+2024-12-09 22:14:05,435 - INFO - Added 11 files
+2024-12-09 22:14:17,288 - ERROR - Error converting PDF to image: Unable to get page count. Is poppler installed and in PATH?
+Traceback (most recent call last):
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 568, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Users/amofillinht/miniconda3/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 92, in convert_pdf_to_image
+    images = convert_from_path(pdf_path, dpi=300)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 594, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+2024-12-09 22:14:17,293 - ERROR - Error processing files: Unable to get page count. Is poppler installed and in PATH?
+Traceback (most recent call last):
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 568, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Users/amofillinht/miniconda3/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 157, in process_files
+    image_path = self.convert_pdf_to_image(file_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 92, in convert_pdf_to_image
+    images = convert_from_path(pdf_path, dpi=300)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 594, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+2024-12-09 22:14:17,293 - ERROR - Error in merge operation: Unable to get page count. Is poppler installed and in PATH?
+Traceback (most recent call last):
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 568, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Users/amofillinht/miniconda3/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 142, in merge_files
+    self.process_files(output_file)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 157, in process_files
+    image_path = self.convert_pdf_to_image(file_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 92, in convert_pdf_to_image
+    images = convert_from_path(pdf_path, dpi=300)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 594, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+2024-12-09 22:14:17,294 - ERROR - Error in event handling: Unable to get page count. Is poppler installed and in PATH?
+Traceback (most recent call last):
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 568, in pdfinfo_from_path
+    proc = Popen(command, env=env, stdout=PIPE, stderr=PIPE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/Users/amofillinht/miniconda3/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'pdfinfo'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 52, in run
+    self.merge_files()
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 142, in merge_files
+    self.process_files(output_file)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 157, in process_files
+    image_path = self.convert_pdf_to_image(file_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 92, in convert_pdf_to_image
+    images = convert_from_path(pdf_path, dpi=300)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 127, in convert_from_path
+    page_count = pdfinfo_from_path(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/miniconda3/lib/python3.12/site-packages/pdf2image/pdf2image.py", line 594, in pdfinfo_from_path
+    raise PDFInfoNotInstalledError(
+pdf2image.exceptions.PDFInfoNotInstalledError: Unable to get page count. Is poppler installed and in PATH?
+2024-12-09 22:32:49,937 - ERROR - Fatal error in main:
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 225, in main
+    app = InvoiceMerger()
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 36, in __init__
+    self.window = sg.Window('发票合并程序', self.layout, finalize=True)
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 9616, in __init__
+    self.Finalize()
+    ~~~~~~~~~~~~~^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 10302, in finalize
+    self.Read(timeout=1)
+    ~~~~~~~~~^^^^^^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 10077, in read
+    results = self._read(timeout=timeout, timeout_key=timeout_key)
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 10148, in _read
+    self._Show()
+    ~~~~~~~~~~^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 9888, in _Show
+    StartupTK(self)
+    ~~~~~~~~~^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 16844, in StartupTK
+    window._create_thread_queue()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 11505, in _create_thread_queue
+    self.thread_strvar.trace('w', self._window_tkvar_changed_callback)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tkinter/__init__.py", line 506, in trace_variable
+    self._tk.call("trace", "variable", self._name, mode, cbname)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: bad option "variable": must be add, info, or remove
+2024-12-09 22:34:01,571 - ERROR - Fatal error in main:
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 226, in main
+    app = InvoiceMerger()
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_new.py", line 35, in __init__
+    self.window = sg.Window('发票合并程序', self.layout, finalize=True)
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 9616, in __init__
+    self.Finalize()
+    ~~~~~~~~~~~~~^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 10302, in finalize
+    self.Read(timeout=1)
+    ~~~~~~~~~^^^^^^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 10077, in read
+    results = self._read(timeout=timeout, timeout_key=timeout_key)
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 10148, in _read
+    self._Show()
+    ~~~~~~~~~~^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 9888, in _Show
+    StartupTK(self)
+    ~~~~~~~~~^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 16844, in StartupTK
+    window._create_thread_queue()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.13/site-packages/PySimpleGUI/PySimpleGUI.py", line 11505, in _create_thread_queue
+    self.thread_strvar.trace('w', self._window_tkvar_changed_callback)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/tkinter/__init__.py", line 506, in trace_variable
+    self._tk.call("trace", "variable", self._name, mode, cbname)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: bad option "variable": must be add, info, or remove
+2024-12-09 22:34:15,048 - INFO - GUI initialized successfully
+2024-12-09 22:34:22,476 - INFO - Opening file dialog
+2024-12-09 22:44:05,782 - INFO - GUI initialized successfully
+2024-12-09 22:44:08,641 - INFO - Opening file dialog
+2024-12-09 22:44:36,149 - INFO - GUI initialized successfully
+2024-12-09 22:44:37,878 - INFO - Opening file dialog
+2024-12-09 22:45:18,945 - INFO - GUI initialized successfully
+2024-12-09 22:45:31,338 - INFO - Added 11 files
+2024-12-09 22:45:41,900 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:41,900 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:42,310 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:42,310 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:42,657 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:42,657 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:43,027 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:43,028 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:43,385 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:43,385 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:43,745 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:43,745 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:44,128 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:44,129 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:44,514 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:44,514 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:44,515 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:44,515 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:45:44,515 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:45:44,515 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:45:44,515 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:44,515 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:45:44,515 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:45:44,515 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:45:44,515 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:44,515 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:45:44,516 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:45:44,516 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:45:44,772 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:44,772 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:45,222 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:45,223 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:45,672 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:45,672 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:46,150 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:46,150 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:46,600 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:46,600 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:47,039 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:47,039 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:47,488 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:47,488 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:47,948 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:47,948 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:48,531 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:48,531 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:49,179 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:49,179 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:49,810 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:45:49,810 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:45:50,154 - INFO - PDF generation completed successfully
+2024-12-09 22:48:07,718 - INFO - GUI initialized successfully
+2024-12-09 22:50:12,646 - DEBUG - Importing BlpImagePlugin
+2024-12-09 22:50:12,647 - DEBUG - Importing BmpImagePlugin
+2024-12-09 22:50:12,647 - DEBUG - Importing BufrStubImagePlugin
+2024-12-09 22:50:12,647 - DEBUG - Importing CurImagePlugin
+2024-12-09 22:50:12,648 - DEBUG - Importing DcxImagePlugin
+2024-12-09 22:50:12,648 - DEBUG - Importing DdsImagePlugin
+2024-12-09 22:50:12,649 - DEBUG - Importing EpsImagePlugin
+2024-12-09 22:50:12,649 - DEBUG - Importing FitsImagePlugin
+2024-12-09 22:50:12,649 - DEBUG - Importing FliImagePlugin
+2024-12-09 22:50:12,650 - DEBUG - Importing FpxImagePlugin
+2024-12-09 22:50:12,650 - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2024-12-09 22:50:12,650 - DEBUG - Importing FtexImagePlugin
+2024-12-09 22:50:12,651 - DEBUG - Importing GbrImagePlugin
+2024-12-09 22:50:12,651 - DEBUG - Importing GifImagePlugin
+2024-12-09 22:50:12,651 - DEBUG - Importing GribStubImagePlugin
+2024-12-09 22:50:12,651 - DEBUG - Importing Hdf5StubImagePlugin
+2024-12-09 22:50:12,653 - DEBUG - Importing IcnsImagePlugin
+2024-12-09 22:50:12,654 - DEBUG - Importing IcoImagePlugin
+2024-12-09 22:50:12,655 - DEBUG - Importing ImImagePlugin
+2024-12-09 22:50:12,655 - DEBUG - Importing ImtImagePlugin
+2024-12-09 22:50:12,655 - DEBUG - Importing IptcImagePlugin
+2024-12-09 22:50:12,656 - DEBUG - Importing JpegImagePlugin
+2024-12-09 22:50:12,656 - DEBUG - Importing Jpeg2KImagePlugin
+2024-12-09 22:50:12,656 - DEBUG - Importing McIdasImagePlugin
+2024-12-09 22:50:12,656 - DEBUG - Importing MicImagePlugin
+2024-12-09 22:50:12,656 - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2024-12-09 22:50:12,656 - DEBUG - Importing MpegImagePlugin
+2024-12-09 22:50:12,657 - DEBUG - Importing MpoImagePlugin
+2024-12-09 22:50:12,663 - DEBUG - Importing MspImagePlugin
+2024-12-09 22:50:12,664 - DEBUG - Importing PalmImagePlugin
+2024-12-09 22:50:12,665 - DEBUG - Importing PcdImagePlugin
+2024-12-09 22:50:12,665 - DEBUG - Importing PcxImagePlugin
+2024-12-09 22:50:12,665 - DEBUG - Importing PdfImagePlugin
+2024-12-09 22:50:12,670 - DEBUG - Importing PixarImagePlugin
+2024-12-09 22:50:12,670 - DEBUG - Importing PngImagePlugin
+2024-12-09 22:50:12,670 - DEBUG - Importing PpmImagePlugin
+2024-12-09 22:50:12,670 - DEBUG - Importing PsdImagePlugin
+2024-12-09 22:50:12,670 - DEBUG - Importing QoiImagePlugin
+2024-12-09 22:50:12,671 - DEBUG - Importing SgiImagePlugin
+2024-12-09 22:50:12,671 - DEBUG - Importing SpiderImagePlugin
+2024-12-09 22:50:12,671 - DEBUG - Importing SunImagePlugin
+2024-12-09 22:50:12,671 - DEBUG - Importing TgaImagePlugin
+2024-12-09 22:50:12,672 - DEBUG - Importing TiffImagePlugin
+2024-12-09 22:50:12,672 - DEBUG - Importing WebPImagePlugin
+2024-12-09 22:50:13,551 - DEBUG - Importing WmfImagePlugin
+2024-12-09 22:50:13,552 - DEBUG - Importing XbmImagePlugin
+2024-12-09 22:50:13,552 - DEBUG - Importing XpmImagePlugin
+2024-12-09 22:50:13,552 - DEBUG - Importing XVThumbImagePlugin
+2024-12-09 22:50:13,553 - ERROR - Error processing image: cannot identify image file '/Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf'
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 119, in process_image
+    return Image.open(image_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 3305, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file '/Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf'
+2024-12-09 22:50:13,554 - ERROR - Error processing files: cannot identify image file '/Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf'
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 69, in process_files
+    img1 = self.process_image(file1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 119, in process_image
+    return Image.open(image_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 3305, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file '/Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf'
+2024-12-09 22:50:13,554 - ERROR - Fatal error in main:
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 38, in main
+    merger.process_files(files.split(';'), output_file)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 69, in process_files
+    img1 = self.process_image(file1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 119, in process_image
+    return Image.open(image_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 3305, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file '/Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf'
+2024-12-09 22:51:48,372 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:51:48,372 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:51:48,373 - ERROR - Error processing files: 'NoneType' object has no attribute 'seek'
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 182, in load
+    seek = self.load_seek
+           ^^^^^^^^^^^^^^
+AttributeError: 'PngImageFile' object has no attribute 'load_seek'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 75, in process_files
+    img1.save(temp_img1)
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 2401, in save
+    self._ensure_mutable()
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 579, in _ensure_mutable
+    self._copy()
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 572, in _copy
+    self.load()
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 185, in load
+    seek = self.fp.seek
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'seek'
+2024-12-09 22:51:48,375 - ERROR - Fatal error in main:
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 182, in load
+    seek = self.load_seek
+           ^^^^^^^^^^^^^^
+AttributeError: 'PngImageFile' object has no attribute 'load_seek'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 38, in main
+    merger.process_files(files.split(';'), output_file)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 75, in process_files
+    img1.save(temp_img1)
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 2401, in save
+    self._ensure_mutable()
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 579, in _ensure_mutable
+    self._copy()
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 572, in _copy
+    self.load()
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 185, in load
+    seek = self.fp.seek
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'seek'
+2024-12-09 22:52:08,849 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:52:08,849 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:52:08,850 - ERROR - Error processing files: 'NoneType' object has no attribute 'seek'
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 182, in load
+    seek = self.load_seek
+           ^^^^^^^^^^^^^^
+AttributeError: 'PngImageFile' object has no attribute 'load_seek'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 75, in process_files
+    img1.save(temp_img1)
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 2401, in save
+    self._ensure_mutable()
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 579, in _ensure_mutable
+    self._copy()
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 572, in _copy
+    self.load()
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 185, in load
+    seek = self.fp.seek
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'seek'
+2024-12-09 22:52:08,851 - ERROR - Fatal error in main:
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 182, in load
+    seek = self.load_seek
+           ^^^^^^^^^^^^^^
+AttributeError: 'PngImageFile' object has no attribute 'load_seek'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 38, in main
+    merger.process_files(files.split(';'), output_file)
+  File "/Users/amofillinht/Desktop/发票合并程序/invoice_merger_v2.py", line 75, in process_files
+    img1.save(temp_img1)
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 2401, in save
+    self._ensure_mutable()
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 579, in _ensure_mutable
+    self._copy()
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/Image.py", line 572, in _copy
+    self.load()
+  File "/Users/amofillinht/Desktop/发票合并程序/venv/lib/python3.11/site-packages/PIL/ImageFile.py", line 185, in load
+    seek = self.fp.seek
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'seek'
+2024-12-09 22:53:29,863 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf
+2024-12-09 22:53:29,867 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf
+2024-12-09 22:53:30,166 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:30,166 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:30,288 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:30,288 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:30,387 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_166.00Ôª_2022.07.17_ºÀ¶¦·á£¨ÏÃÃÅ£©²ÍÒûÓÐÏÞ¹«Ë¾Îäºº½¨°²½Ö²ÍÌü_042002200211_85799214.pdf
+2024-12-09 22:53:30,387 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_166.00Ôª_2022.07.17_ºÀ¶¦·á£¨ÏÃÃÅ£©²ÍÒûÓÐÏÞ¹«Ë¾Îäºº½¨°²½Ö²ÍÌü_042002200211_85799214.pdf
+2024-12-09 22:53:30,670 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:30,670 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:30,796 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:30,796 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:30,898 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/餐饮_111.00元_2022.06.29_杭州市上城区华筵餐饮店_033002200111_58681919.pdf
+2024-12-09 22:53:30,898 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/餐饮_111.00元_2022.06.29_杭州市上城区华筵餐饮店_033002200111_58681919.pdf
+2024-12-09 22:53:31,119 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:31,119 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:31,241 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:31,241 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:31,340 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/餐饮_119.00元_2022.07.16_武汉秀玉兴宏祥餐饮管理有限公司_042002200211_24551721.pdf
+2024-12-09 22:53:31,340 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/餐饮_119.00元_2022.07.16_武汉秀玉兴宏祥餐饮管理有限公司_042002200211_24551721.pdf
+2024-12-09 22:53:31,582 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:31,582 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:31,711 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:31,711 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:31,811 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/其他_78.67元_2023.05.04_北京爱特博旅运服务有限责任公司_011002300511_46921836.pdf
+2024-12-09 22:53:31,811 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/其他_78.67元_2023.05.04_北京爱特博旅运服务有限责任公司_011002300511_46921836.pdf
+2024-12-09 22:53:32,028 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:32,028 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:32,150 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:32,150 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:32,250 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/其他_102.88元_2023.05.04_武汉斑马快跑科技有限公司_042002300111_27676068.pdf
+2024-12-09 22:53:32,250 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/其他_102.88元_2023.05.04_武汉斑马快跑科技有限公司_042002300111_27676068.pdf
+2024-12-09 22:53:32,460 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:32,460 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:32,584 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:32,585 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:32,684 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/其他_287.49元_2023.05.04_南京领行科技股份有限公司江宁分公司_032002200711_12343661.pdf
+2024-12-09 22:53:32,684 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/其他_287.49元_2023.05.04_南京领行科技股份有限公司江宁分公司_032002200711_12343661.pdf
+2024-12-09 22:53:32,936 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:32,936 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:33,059 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:33,059 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:33,158 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/其他_1000.00元_2023.03.09_武汉东湖新技术开发区亿盛喜村餐厅_042002200511_66048480.pdf
+2024-12-09 22:53:33,158 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/其他_1000.00元_2023.03.09_武汉东湖新技术开发区亿盛喜村餐厅_042002200511_66048480.pdf
+2024-12-09 22:53:33,387 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:33,388 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:33,509 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:33,509 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:33,606 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.16@2x.png
+2024-12-09 22:53:33,608 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:33,608 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:53:33,608 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:53:33,608 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:53:33,934 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:33,934 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:34,164 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.26@2x.png
+2024-12-09 22:53:34,164 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:34,164 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:53:34,164 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:53:34,164 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:53:34,484 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:34,484 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:34,707 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.34@2x.png
+2024-12-09 22:53:34,708 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:34,708 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:53:34,708 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:53:34,708 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:53:35,025 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:53:35,025 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:53:35,307 - INFO - PDF generation completed successfully
+2024-12-09 22:53:35,309 - INFO - 文件已保存至：/Users/amofillinht/Downloads/merged_invoices_20241209_225329.pdf
+2024-12-09 22:53:35,311 - INFO - Cleaned up temporary files
+2024-12-09 22:55:46,902 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf
+2024-12-09 22:55:46,903 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_147.00Ôª_2022.08.06_ÎäººÊÐºéÉ½ÇøàËÌ©²ÍÒûµê_042002200311_01531326.pdf
+2024-12-09 22:55:47,318 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:47,318 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:47,439 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:47,439 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:47,535 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_166.00Ôª_2022.07.17_ºÀ¶¦·á£¨ÏÃÃÅ£©²ÍÒûÓÐÏÞ¹«Ë¾Îäºº½¨°²½Ö²ÍÌü_042002200211_85799214.pdf
+2024-12-09 22:55:47,536 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/²ÍÒû_166.00Ôª_2022.07.17_ºÀ¶¦·á£¨ÏÃÃÅ£©²ÍÒûÓÐÏÞ¹«Ë¾Îäºº½¨°²½Ö²ÍÌü_042002200211_85799214.pdf
+2024-12-09 22:55:47,824 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:47,824 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:47,949 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:47,949 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:48,048 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/餐饮_111.00元_2022.06.29_杭州市上城区华筵餐饮店_033002200111_58681919.pdf
+2024-12-09 22:55:48,048 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/餐饮_111.00元_2022.06.29_杭州市上城区华筵餐饮店_033002200111_58681919.pdf
+2024-12-09 22:55:48,256 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:48,256 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:48,377 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:48,377 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:48,474 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/餐饮_119.00元_2022.07.16_武汉秀玉兴宏祥餐饮管理有限公司_042002200211_24551721.pdf
+2024-12-09 22:55:48,475 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/餐饮_119.00元_2022.07.16_武汉秀玉兴宏祥餐饮管理有限公司_042002200211_24551721.pdf
+2024-12-09 22:55:48,699 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:48,699 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:48,823 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:48,823 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:48,921 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/其他_78.67元_2023.05.04_北京爱特博旅运服务有限责任公司_011002300511_46921836.pdf
+2024-12-09 22:55:48,921 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/其他_78.67元_2023.05.04_北京爱特博旅运服务有限责任公司_011002300511_46921836.pdf
+2024-12-09 22:55:49,122 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:49,122 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:49,245 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:49,245 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:49,341 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/其他_102.88元_2023.05.04_武汉斑马快跑科技有限公司_042002300111_27676068.pdf
+2024-12-09 22:55:49,341 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/其他_102.88元_2023.05.04_武汉斑马快跑科技有限公司_042002300111_27676068.pdf
+2024-12-09 22:55:49,552 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:49,552 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:49,673 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:49,673 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:49,771 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/其他_287.49元_2023.05.04_南京领行科技股份有限公司江宁分公司_032002200711_12343661.pdf
+2024-12-09 22:55:49,771 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/其他_287.49元_2023.05.04_南京领行科技股份有限公司江宁分公司_032002200711_12343661.pdf
+2024-12-09 22:55:50,021 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:50,021 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:50,144 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:50,144 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:50,244 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/其他_1000.00元_2023.03.09_武汉东湖新技术开发区亿盛喜村餐厅_042002200511_66048480.pdf
+2024-12-09 22:55:50,244 - INFO - Converting PDF: /Users/amofillinht/Desktop/测试PDF文件/其他_1000.00元_2023.03.09_武汉东湖新技术开发区亿盛喜村餐厅_042002200511_66048480.pdf
+2024-12-09 22:55:50,471 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:50,471 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:50,593 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:50,593 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:50,692 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.16@2x.png
+2024-12-09 22:55:50,693 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:50,693 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:55:50,693 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:55:50,693 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:55:51,016 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:51,016 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:51,248 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.26@2x.png
+2024-12-09 22:55:51,249 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:51,249 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:55:51,249 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:55:51,249 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:55:51,565 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:51,565 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:51,791 - INFO - Processing image: /Users/amofillinht/Desktop/测试PDF文件/CleanShot 2024-12-09 at 21.51.34@2x.png
+2024-12-09 22:55:51,791 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:51,791 - DEBUG - STREAM b'iTXt' 41 578
+2024-12-09 22:55:51,791 - DEBUG - STREAM b'sRGB' 631 1
+2024-12-09 22:55:51,791 - DEBUG - STREAM b'IDAT' 644 16384
+2024-12-09 22:55:52,113 - DEBUG - STREAM b'IHDR' 16 13
+2024-12-09 22:55:52,113 - DEBUG - STREAM b'IDAT' 41 65536
+2024-12-09 22:55:52,402 - INFO - PDF generation completed successfully
+2024-12-09 22:55:52,403 - INFO - 文件已保存至：/Users/amofillinht/Downloads/merged_invoices_20241209_225546.pdf
+2024-12-09 22:55:52,406 - INFO - Cleaned up temporary files
