@@ -8,6 +8,8 @@ from reportlab.lib.pagesizes import A4
 import tempfile
 import logging
 import argparse
+import shutil
+from reportlab.lib.utils import ImageReader
 
 # 设置日志记录
 logging.basicConfig(
@@ -68,17 +70,22 @@ class InvoiceMerger:
         logging.info(f"原始大小: {image.size}, 调整后大小: ({width}, {height})")
         return width, height
 
-    def merge_files(self, input_files, output_file):
+    def merge_files(self, input_files, output_file, progress_callback=None):
         try:
             # 创建一个列表存储所有处理后的图片
             processed_images = []
+            total_files = len(input_files)
             
             # 处理所有文件
-            for file_path in input_files:
+            for index, file_path in enumerate(input_files):
                 logging.info(f"处理文件: {file_path}")
                 if not os.path.exists(file_path):
                     logging.error(f"文件不存在: {file_path}")
                     continue
+                
+                filename = os.path.basename(file_path)
+                if progress_callback:
+                    progress_callback(index, total_files, filename)
                     
                 if file_path.lower().endswith('.pdf'):
                     # 将PDF转换为图片
@@ -99,62 +106,42 @@ class InvoiceMerger:
             c.setPageCompression(0)  # 禁用压缩以保持质量
             page_width, page_height = A4
             logging.info(f"PDF页面大小: {A4}")
-            
-            # 设置边距和图片之间的间距
-            margin = 20  # 减小页面边距
-            spacing = 20  # 减小图片之间的间距
-            
-            # 计算可用区域
-            usable_width = page_width - 2 * margin
-            usable_height = (page_height - 2 * margin - spacing) / 2  # 减去边距和间距后平分高度
-            logging.info(f"可用区域: 宽度={usable_width}, 高度={usable_height}")
-            
-            # 处理所有图片
-            for i in range(0, len(processed_images), 2):
-                logging.info(f"处理第 {i+1}/{len(processed_images)} 张图片")
-                # 处理第一张图片（上方）
-                img1 = processed_images[i]
-                width1, height1 = self.calculate_image_size(img1, usable_width, usable_height)
+
+            # 计算每页可以放置的图片数量和大小
+            max_images_per_page = 2
+            max_image_height = (page_height - 40) / max_images_per_page  # 留出页边距
+            max_image_width = page_width - 40  # 留出页边距
+
+            # 分批处理图片
+            for i in range(0, len(processed_images), max_images_per_page):
+                batch = processed_images[i:i + max_images_per_page]
+                y_position = page_height - 20  # 从顶部开始
                 
-                # 计算上方图片的位置（水平居中）
-                x1 = (page_width - width1) / 2
-                y1 = page_height - margin - height1
-                logging.info(f"图片1位置: x={x1}, y={y1}, 宽度={width1}, 高度={height1}")
-                
-                # 将图片保存为临时文件
-                temp_img1 = os.path.join(self.temp_dir, f"temp_img1_{i}.png")
-                img1.save(temp_img1, 'PNG', optimize=False, quality=100)
-                logging.info(f"保存临时图片1: {temp_img1}")
-                c.drawImage(temp_img1, x1, y1, width=width1, height=height1)
-                
-                # 如果还有第二张图片（下方）
-                if i + 1 < len(processed_images):
-                    img2 = processed_images[i + 1]
-                    width2, height2 = self.calculate_image_size(img2, usable_width, usable_height)
+                for image in batch:
+                    # 计算图片在页面上的大小
+                    width, height = self.calculate_image_size(image, max_image_width, max_image_height)
+                    x_position = (page_width - width) / 2  # 居中放置
                     
-                    # 计算下方图片的位置（水平居中）
-                    x2 = (page_width - width2) / 2
-                    y2 = margin
-                    logging.info(f"图片2位置: x={x2}, y={y2}, 宽度={width2}, 高度={height2}")
+                    # 在PDF中绘制图片
+                    c.drawImage(ImageReader(image), x_position, y_position - height, width, height)
+                    y_position -= (height + 20)  # 添加间距
                     
-                    # 将图片保存为临时文件
-                    temp_img2 = os.path.join(self.temp_dir, f"temp_img2_{i}.png")
-                    img2.save(temp_img2, 'PNG', optimize=False, quality=100)
-                    logging.info(f"保存临时图片2: {temp_img2}")
-                    c.drawImage(temp_img2, x2, y2, width=width2, height=height2)
+                    if progress_callback:
+                        current_progress = i + batch.index(image) + 1
+                        progress_callback(current_progress, len(processed_images), "正在生成PDF...")
                 
-                c.showPage()  # 结束当前页面
-                logging.info("页面已完成")
+                c.showPage()  # 创建新页面
             
-            logging.info("开始保存PDF文件...")
-            c.save()  # 保存PDF文件
-            logging.info(f"PDF生成成功: {output_file}")
+            c.save()
+            logging.info(f"PDF文件已保存到: {output_file}")
             
         except Exception as e:
             logging.error(f"合并文件时出错: {str(e)}", exc_info=True)
             raise
         finally:
-            self.cleanup()
+            # 清理临时文件
+            if os.path.exists(self.temp_dir):
+                shutil.rmtree(self.temp_dir)
 
     def cleanup(self):
         """清理临时文件和目录"""
@@ -172,10 +159,13 @@ def main():
     
     args = parser.parse_args()
     
+    def progress_callback(current, total, message):
+        print(f"\r进度：{current}/{total} - {message}", end="")
+    
     try:
         merger = InvoiceMerger()
-        merger.merge_files(args.input_files, args.output)
-        print(f"合并完成！输出文件：{args.output}")
+        merger.merge_files(args.input_files, args.output, progress_callback)
+        print(f"\n合并完成！输出文件：{args.output}")
     except Exception as e:
         print(f"错误：{str(e)}")
         sys.exit(1)

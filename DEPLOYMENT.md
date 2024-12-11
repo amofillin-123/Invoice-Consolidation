@@ -6,18 +6,20 @@
 ## 实施步骤
 
 ### 阶段一：代码改造
-1. [ ] 创建新的 Web 应用分支
-2. [ ] 将现有 Python 脚本改造为 Flask 应用
-   - 创建 app.py 主程序文件
-   - 设计 RESTful API 接口
+1. [x] 创建新的 Web 应用分支
+   - 已初始化 Git 仓库
+   - 创建并切换到 `web-app` 分支
+2. [x] 将现有 Python 脚本改造为 Flask 应用
+   - 创建 app.py 主程序文件，实现文件上传和处理逻辑
+   - 设计 RESTful API 接口：/upload 和 /download
    - 实现文件上传和处理逻辑
-3. [ ] 创建前端界面
-   - 设计简洁的用户界面
+   - 添加错误处理和日志记录
+3. [x] 创建前端界面
+   - 设计简洁的用户界面（Bootstrap 5）
    - 实现文件上传组件
    - 添加操作提示和进度显示
-4. [ ] 更新项目依赖
-   - 添加 Flask 相关依赖
-   - 更新 requirements.txt
+4. [x] 更新项目依赖
+   - 添加 Flask 相关依赖到 requirements.txt
 
 ### 阶段二：GitHub 仓库设置
 1. [ ] 创建新的 GitHub 仓库
