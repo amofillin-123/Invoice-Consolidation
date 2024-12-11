@@ -19,6 +19,17 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 限制上传文件大小为16MB
 app.config['UPLOAD_FOLDER'] = os.getenv('UPLOAD_FOLDER', tempfile.mkdtemp())  # 允许通过环境变量配置上传目录
 
+# 生产环境配置
+if os.environ.get('FLASK_ENV') == 'production':
+    app.config.update(
+        SESSION_COOKIE_SECURE=True,
+        SESSION_COOKIE_HTTPONLY=True,
+        SESSION_COOKIE_SAMESITE='Lax',
+    )
+
+# 确保上传目录存在
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+
 # 用于存储处理进度的字典
 processing_status = {}
 
@@ -162,4 +173,5 @@ import atexit
 atexit.register(cleanup_temp_files)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=1573)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
