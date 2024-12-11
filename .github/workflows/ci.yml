@@ -41,7 +41,12 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
     - name: Run tests with verbose output
+      env:
+        UPLOAD_FOLDER: /tmp/invoice_uploads
+        PYTHONPATH: ${{ github.workspace }}
       run: |
+        mkdir -p /tmp/invoice_uploads
+        chmod 777 /tmp/invoice_uploads
         python -m pytest -v --tb=long --capture=no
 
   deploy:

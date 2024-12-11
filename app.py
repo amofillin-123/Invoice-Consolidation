@@ -12,12 +12,12 @@ import uuid
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    filename='invoice_merger.log'
+    handlers=[logging.StreamHandler()]  # 使用标准输出而不是文件
 )
 
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 限制上传文件大小为16MB
-app.config['UPLOAD_FOLDER'] = tempfile.mkdtemp()  # 创建临时上传目录
+app.config['UPLOAD_FOLDER'] = os.getenv('UPLOAD_FOLDER', tempfile.mkdtemp())  # 允许通过环境变量配置上传目录
 
 # 用于存储处理进度的字典
 processing_status = {}
