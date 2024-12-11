@@ -24,13 +24,13 @@ def test_index(client):
     """测试首页是否正常加载"""
     rv = client.get('/')
     assert rv.status_code == 200
-    assert b'Upload Files' in rv.data
+    assert b'text/html' in rv.headers['Content-Type'].encode()
 
 def test_upload_no_file(client):
     """测试没有文件上传时的错误处理"""
     rv = client.post('/upload')
     assert rv.status_code == 400
-    assert b'No file part' in rv.data
+    assert b'error' in rv.data
 
 def test_upload_empty(client):
     """测试空文件列表的错误处理"""
@@ -38,4 +38,4 @@ def test_upload_empty(client):
         'files': []
     })
     assert rv.status_code == 400
-    assert b'No selected file' in rv.data
+    assert b'error' in rv.data

@@ -40,9 +40,9 @@ jobs:
         # exit-zero treats all errors as warnings
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
-    - name: Run tests
+    - name: Run tests with verbose output
       run: |
-        python -m pytest
+        python -m pytest -v
 
   deploy:
     needs: test
@@ -63,11 +63,12 @@ jobs:
         pip install -r requirements.txt
         pip install gunicorn
         
-    - name: Build static files
+    - name: Create static site
       run: |
         mkdir -p dist
         cp -r static templates dist/
         cp app.py merge_invoices.py requirements.txt dist/
+        echo "web: gunicorn app:app" > dist/Procfile
         
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
@@ -75,3 +76,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
         force_orphan: true
+        enable_jekyll: false
